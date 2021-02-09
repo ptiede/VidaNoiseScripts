@@ -31,11 +31,11 @@ readlink -f PATH/TO/IMAGE/DIRECTORY/*.fits > imagelist
 To run VIDA on the image list then use
 With an asymmetric Gaussian:
 ```bash
-julia -p ncores imagelist bbimage_extractor.jl outdir/imagelist -c 0.0 --filter AsymG --stride 250
+julia -p ncores bbimage_extractor.jl outdir/imagelist -c 0.0 --filter AsymG --stride 250
 ```
 or with a general cosine ring with a first and fourth order expansion in thickness and brightness:
 ```bash
-julia -p ncores imagelist cosine_extractor.jl outdir/imagelist -c 0.0 --filter 1 4 --stride 250
+julia -p ncores cosine_extractor.jl outdir/imagelist -c 0.0 --filter 1 4 --stride 250
 ```
 which will make a `vida_summary.csv` csv file with the optimal filter parameters.
 
@@ -57,11 +57,11 @@ To create set of fits images and imagelist from a Themis chain
 To run VIDA
 With an asymmetric Gaussian:
 ```bash
-julia -p ncores imagelist bbimage_extractor.jl outdir/imagelist -c 0.0 --filter AsymG --stride 250
+julia -p ncores bbimage_extractor.jl outdir/imagelist -c 0.0 --filter AsymG --stride 250
 ```
 or with a general cosine ring with a first and fourth order expansion in thickness and brightness:
 ```bash
-julia -p ncores imagelist cosine_extractor.jl outdir/imagelist -c 0.0 --filter 1 4 --stride 250
+julia -p ncores cosine_extractor.jl outdir/imagelist -c 0.0 --filter 1 4 --stride 250
 ```
 which will make a `vida_summary.csv` file with the optimal filter parameters
 
